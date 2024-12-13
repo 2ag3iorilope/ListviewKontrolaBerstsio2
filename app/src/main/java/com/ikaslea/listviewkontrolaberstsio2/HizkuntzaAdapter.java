@@ -44,11 +44,9 @@ public class HizkuntzaAdapter extends BaseAdapter {
 
             convertView = LayoutInflater.from(context).inflate(R.layout.list_item, parent, false);
 
-
             holder = new ViewHolder();
             holder.textPrincipal = convertView.findViewById(R.id.textPrincipal);
             holder.textSecundario = convertView.findViewById(R.id.textSecundario);
-
 
             convertView.setTag(holder);
         } else {
@@ -56,13 +54,13 @@ public class HizkuntzaAdapter extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
 
-
         Hizkuntzak idioma = idiomas.get(position);
         holder.textPrincipal.setText(idioma.getNombre());
         holder.textSecundario.setText(idioma.getFrase());
 
         return convertView;
     }
+
     static class ViewHolder {
         TextView textPrincipal;
         TextView textSecundario;

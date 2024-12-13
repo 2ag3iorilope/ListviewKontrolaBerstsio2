@@ -27,19 +27,16 @@ public class MainActivity extends AppCompatActivity {
         ListView listViewIdiomas = findViewById(R.id.ListView1);
         TextView textViewSeleccionado = findViewById(R.id.textViewSeleccionado);
 
-
         ArrayList<Hizkuntzak> idiomas = new ArrayList<>();
         for (int i = 1; i <= 29; i++) {
 
             int nombreResId = getResources().getIdentifier("idioma_" + i, "string", getPackageName());
             int fraseResId = getResources().getIdentifier("frase_" + i, "string", getPackageName());
 
-
             if (nombreResId != 0 && fraseResId != 0) {
 
                 String nombre = getString(nombreResId);
                 String frase = getString(fraseResId);
-
 
                 idiomas.add(new Hizkuntzak(nombre, frase));
             } else {
@@ -48,14 +45,13 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-
         HizkuntzaAdapter adapter = new HizkuntzaAdapter(this, idiomas);
         listViewIdiomas.setAdapter(adapter);
 
+        listViewIdiomas
+                .setOnItemClickListener((AdapterView<?> parent, android.view.View view, int position, long id) -> {
 
-        listViewIdiomas.setOnItemClickListener((AdapterView<?> parent, android.view.View view, int position, long id) -> {
-
-            textViewSeleccionado.setText(idiomas.get(position).getFrase());
-        });
+                    textViewSeleccionado.setText(idiomas.get(position).getFrase());
+                });
     }
 }
