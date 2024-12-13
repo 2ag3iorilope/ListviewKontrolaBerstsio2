@@ -1,6 +1,7 @@
 package com.ikaslea.listviewkontrolaberstsio2;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -28,11 +29,24 @@ public class MainActivity extends AppCompatActivity {
 
 
         ArrayList<Hizkuntzak> idiomas = new ArrayList<>();
-        idiomas.add(new Hizkuntzak(getString(R.string.castellano), getString(R.string.frase_castellano)));
-        idiomas.add(new Hizkuntzak(getString(R.string.euskera), getString(R.string.frase_euskera)));
-        idiomas.add(new Hizkuntzak(getString(R.string.ingles), getString(R.string.frase_ingles)));
-        idiomas.add(new Hizkuntzak(getString(R.string.aleman), getString(R.string.frase_aleman)));
-        idiomas.add(new Hizkuntzak(getString(R.string.noruego), getString(R.string.frase_noruego)));
+        for (int i = 1; i <= 29; i++) {
+
+            int nombreResId = getResources().getIdentifier("idioma_" + i, "string", getPackageName());
+            int fraseResId = getResources().getIdentifier("frase_" + i, "string", getPackageName());
+
+
+            if (nombreResId != 0 && fraseResId != 0) {
+
+                String nombre = getString(nombreResId);
+                String frase = getString(fraseResId);
+
+
+                idiomas.add(new Hizkuntzak(nombre, frase));
+            } else {
+
+                Log.e("MainActivity", "Errekurtsoa ez da aurkitu idioma_" + i + " o frase_" + i);
+            }
+        }
 
 
         HizkuntzaAdapter adapter = new HizkuntzaAdapter(this, idiomas);

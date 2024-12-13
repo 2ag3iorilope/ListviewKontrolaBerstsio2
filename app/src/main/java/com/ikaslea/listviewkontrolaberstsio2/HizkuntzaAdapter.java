@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import androidx.recyclerview.widget.RecyclerView;
+
 import java.util.ArrayList;
 
 public class HizkuntzaAdapter extends BaseAdapter {
@@ -35,18 +37,34 @@ public class HizkuntzaAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+
+        ViewHolder holder;
+
         if (convertView == null) {
+
             convertView = LayoutInflater.from(context).inflate(R.layout.list_item, parent, false);
+
+
+            holder = new ViewHolder();
+            holder.textPrincipal = convertView.findViewById(R.id.textPrincipal);
+            holder.textSecundario = convertView.findViewById(R.id.textSecundario);
+
+
+            convertView.setTag(holder);
+        } else {
+
+            holder = (ViewHolder) convertView.getTag();
         }
 
-        Hizkuntzak idioma = (Hizkuntzak) getItem(position);
 
-        TextView textPrincipal = convertView.findViewById(R.id.textPrincipal);
-        TextView textSecundario = convertView.findViewById(R.id.textSecundario);
-
-        textPrincipal.setText(idioma.getNombre());
-        textSecundario.setText(idioma.getFrase());
+        Hizkuntzak idioma = idiomas.get(position);
+        holder.textPrincipal.setText(idioma.getNombre());
+        holder.textSecundario.setText(idioma.getFrase());
 
         return convertView;
+    }
+    static class ViewHolder {
+        TextView textPrincipal;
+        TextView textSecundario;
     }
 }

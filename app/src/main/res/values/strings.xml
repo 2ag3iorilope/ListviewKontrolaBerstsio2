@@ -1,18 +1,72 @@
 <resources>
     <string name="app_name">ListviewKontrolaBerstsio2</string>
 
-    <string name="castellano">Castellano</string>
-    <string name="euskera">Euskera</string>
-    <string name="ingles">Inglés</string>
-    <string name="aleman">Alemán</string>
-    <string name="noruego">Noruego</string>
+    <string name="idioma_1">Castellano</string>
+    <string name="idioma_2">Euskera</string>
+    <string name="idioma_3">Inglés</string>
+    <string name="idioma_4">Alemán</string>
+    <string name="idioma_5">Noruego</string>
+    <string name="idioma_6">Francés</string>
+    <string name="idioma_7">Italiano</string>
+    <string name="idioma_8">Portugués</string>
+    <string name="idioma_9">Chino</string>
+    <string name="idioma_10">Japonés</string>
+    <string name="idioma_11">Coreano</string>
+    <string name="idioma_12">Ruso</string>
+    <string name="idioma_13">Árabe</string>
+    <string name="idioma_14">Turco</string>
+    <string name="idioma_15">Griego</string>
+    <string name="idioma_16">Sueco</string>
+    <string name="idioma_17">Polaco</string>
+    <string name="idioma_18">Danés</string>
+    <string name="idioma_19">Finlandés</string>
+    <string name="idioma_20">Checo</string>
+    <string name="idioma_21">Hindi</string>
+    <string name="idioma_22">Hebreo</string>
+    <string name="idioma_23">Vietnamita</string>
+    <string name="idioma_24">Tailandés</string>
+    <string name="idioma_25">Suajili</string>
+    <string name="idioma_26">Holandés</string>
+    <string name="idioma_27">Esperanto</string>
+    <string name="idioma_28">Húngaro</string>
+    <string name="idioma_29">Indonesio</string>
 
-    <string name="frase_castellano">No hay sábado sin sol, ni mofeta sin olor</string>
-    <string name="frase_euskera">Ez dago larunbata eguzkirik gabe, ezta mofeta usainik gabe ere</string>
-    <string name="frase_ingles">There is no Saturday without sun, nor skunk without smell</string>
-    <string name="frase_aleman">Kein Samstag ohne Sonne, kein Stinktier ohne Geruch</string>
-    <string name="frase_noruego">Ingen lørdag uten sol, ingen skunk uten lukt</string>
+    <!-- Frases -->
+    <string name="frase_1">No hay sábado sin sol, ni mofeta sin olor</string>
+    <string name="frase_2">Ez dago larunbata eguzkirik gabe, ezta mofeta usainik gabe ere</string>
+    <string name="frase_3">There is no Saturday without sun, nor skunk without smell</string>
+    <string name="frase_4">Kein Samstag ohne Sonne, kein Stinktier ohne Geruch</string>
+    <string name="frase_5">Ingen lørdag uten sol, ingen skunk uten lukt</string>
+    <string name="frase_6">Il ny a pas de samedi sans soleil, ni de mouffette sans odeur</string>
+    <string name="frase_7">Non cè sabato senza sole, né puzzola senza odore</string>
+    <string name="frase_8">Não há sábado sem sol, nem gambá sem cheiro</string>
+    <string name="frase_9">没有星期六没有阳光，也没有臭鼬没有气味</string>
+    <string name="frase_10">土曜日に太陽なし、スカンクの臭いなし</string>
+    <string name="frase_11">토요일에 태양이 없으면 스컹크에 냄새가 없습니다</string>
+    <string name="frase_12">Нет субботы без солнца, нет скунса без запаха</string>
+    <string name="frase_13">لا يوجد يوم سبت بدون شمس ولا ظربان بدون رائحة</string>
+    <string name="frase_14">Güneşsiz bir cumartesi yok, kokusuz bir kokarca yok</string>
+    <string name="frase_15">Δεν υπάρχει Σάββατο χωρίς ήλιο, ούτε αχινός χωρίς μυρωδιά</string>
+    <string name="frase_16">Ingen lördag utan sol, ingen skunk utan lukt</string>
+    <string name="frase_17">Nie ma soboty bez słońca, ani skunksa bez zapachu</string>
+    <string name="frase_18">Ingen lørdag uden sol, ingen stinkdyr uden lugt</string>
+    <string name="frase_19">Ei ole lauantaita ilman aurinkoa, ei haisunäätää ilman hajua</string>
+    <string name="frase_20">Žádná sobota bez slunce, žádný skunk bez zápachu</string>
+    <string name="frase_21">सूरज के बिना कोई शनिवार नहीं, गंध के बिना कोई बदबू नहीं</string>
+    <string name="frase_22">אין שבת בלי שמש, אין בואש בלי ריח</string>
+    <string name="frase_23">Không có Thứ Bảy nào không có mặt trời, không có chồn hôi nào không có mùi</string>
+    <string name="frase_24">ไม่มีวันเสาร์ที่ไม่มีดวงอาทิตย์ ไม่มีสกั๊งค์ที่ไม่มีกลิ่น</string>
+    <string name="frase_25">Hakuna Jumamosi bila jua, wala skunk bila harufu</string>
+    <string name="frase_26">Geen zaterdag zonder zon, geen stinkdier zonder geur</string>
+    <string name="frase_27">Neniu sabato sen suno, nek skunko sen odoro</string>
+    <string name="frase_28">Nincs szombat nap nélkül, nincs bűzös borz szag nélkül</string>
+    <string name="frase_29">Tidak ada Sabtu tanpa matahari, tidak ada sigung tanpa bau</string>
+
+
+
 
     <string name="selecciona_idioma">Aukeratu hizkuntza bat zure esadai erakusteko</string>
+
+
 
 </resources>
