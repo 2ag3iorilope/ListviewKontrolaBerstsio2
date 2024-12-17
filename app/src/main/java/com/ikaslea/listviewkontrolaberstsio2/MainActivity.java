@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         ListView listViewIdiomas = findViewById(R.id.ListView1);
         TextView textViewSeleccionado = findViewById(R.id.textViewSeleccionado);
 
-        ArrayList<Hizkuntzak> idiomas = new ArrayList<>();
+        ArrayList<Hizkuntzak> hizkuntzak = new ArrayList<>();
         for (int i = 1; i <= 29; i++) {
 
             int nombreResId = getResources().getIdentifier("idioma_" + i, "string", getPackageName());
@@ -38,20 +38,20 @@ public class MainActivity extends AppCompatActivity {
                 String nombre = getString(nombreResId);
                 String frase = getString(fraseResId);
 
-                idiomas.add(new Hizkuntzak(nombre, frase));
+                hizkuntzak.add(new Hizkuntzak(nombre, frase));
             } else {
 
                 Log.e("MainActivity", "Errekurtsoa ez da aurkitu idioma_" + i + " o frase_" + i);
             }
         }
 
-        HizkuntzaAdapter adapter = new HizkuntzaAdapter(this, idiomas);
+        HizkuntzaAdapter adapter = new HizkuntzaAdapter(this, hizkuntzak);
         listViewIdiomas.setAdapter(adapter);
 
         listViewIdiomas
                 .setOnItemClickListener((AdapterView<?> parent, android.view.View view, int position, long id) -> {
 
-                    textViewSeleccionado.setText(idiomas.get(position).getFrase());
+                    textViewSeleccionado.setText(hizkuntzak.get(position).getFrase());
                 });
     }
 }
