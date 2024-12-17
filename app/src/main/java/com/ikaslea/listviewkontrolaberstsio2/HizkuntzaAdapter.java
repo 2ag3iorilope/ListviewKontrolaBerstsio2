@@ -13,21 +13,21 @@ import java.util.ArrayList;
 
 public class HizkuntzaAdapter extends BaseAdapter {
     private final Context context;
-    private final ArrayList<Hizkuntzak> idiomas;
+    private final ArrayList<Hizkuntzak> hizkuntzak;
 
     public HizkuntzaAdapter(Context context, ArrayList<Hizkuntzak> idiomas) {
         this.context = context;
-        this.idiomas = idiomas;
+        this.hizkuntzak = idiomas;
     }
 
     @Override
     public int getCount() {
-        return idiomas.size();
+        return hizkuntzak.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return idiomas.get(position);
+        return hizkuntzak.get(position);
     }
 
     @Override
@@ -54,7 +54,7 @@ public class HizkuntzaAdapter extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
 
-        Hizkuntzak idioma = idiomas.get(position);
+        Hizkuntzak idioma = hizkuntzak.get(position);
         holder.textPrincipal.setText(idioma.getNombre());
         holder.textSecundario.setText(idioma.getFrase());
 
